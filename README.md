@@ -28,4 +28,6 @@
 
 ## Resources 
 
+- Module 9 (Node.JS) Student Mini Project (Portfolio Generator)
+
 ## Link to Demo

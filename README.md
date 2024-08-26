@@ -29,5 +29,7 @@
 ## Resources 
 
 - Module 9 (Node.JS) Student Mini Project (Portfolio Generator)
+- https://www.npmjs.com/package/inquirer 
+- License options GitHub: https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba 
 
 ## Link to Demo

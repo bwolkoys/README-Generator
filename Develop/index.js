@@ -16,11 +16,6 @@ const questions = [
     },
     {
         type: "input",
-        name: "TableofContents",
-        message: "Insert table of contents here:",
-    },
-    {
-        type: "input",
         name: "Installation",
         message: "Write installation instructions here:",
     },
@@ -47,8 +42,13 @@ const questions = [
     },
     {
         type: "input",
-        name: "Questions",
-        message: "What is your Github username? What is your email addess?",
+        name: "GitHub",
+        message: "What is your Github username?"
+    },
+    {
+        type: "input",
+        name: "Email",
+        message: "What is your email addess?",
     }
 ];
 
@@ -58,7 +58,54 @@ inquirer.prompt(questions)
     });
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => {
+        if (err) {
+            console.error(err);
+        } else {
+            console.log(`File ${fileName} has been created successfully.`);
+        }
+    });
+}
+
+function generateFile (answers) {
+    return `
+        # ${answers.TitleofProject} 
+
+        ![License](https://img.shields.io/badge/License-${answers.license}-blue.svg)
+
+        ## Description
+        ${answers.Description}
+
+        ## Table of Contents
+        - [Installation](#installation)
+        - [Usage](#usage)
+        - [License](#license)
+        - [Contribution](#Contribution)
+        - [Tests](#Tests)
+        - [Questions](#Questions)
+
+        ## Installation
+        ${answers.Installation}
+
+        ## Usage
+        ${answers.Usage}
+
+        ## License
+        This project is licensed under the ${answers.License}.
+
+        ## Contribution
+        ${answers.Contributing}
+
+        ## Tests
+        ${answers.Tests}
+
+        ## Questions
+        If you have any questions, here is my GitHub link and email address:
+        - ${answers.GitHub}(https://github.com/${answers.GitHub})
+        - ${answers.Email}(mailto:${answers.Email})
+    `;
+}
 
 // TODO: Create a function to initialize app
 function init() {}

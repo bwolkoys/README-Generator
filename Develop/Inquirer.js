@@ -13,7 +13,7 @@ const generateHTML = ({ TitleofProject, Description, TableofContents, Installati
   <body>
     <header class="p-5 mb-4 header bg-light">
       <div class="container">
-        <h1 class="display-4">Title: ${TitleofProject}</h1>
+        <h1 class="display-4"> # Title: ${TitleofProject}</h1>
         <h1 class="display-4">Description: ${Description}</h1>
         <h1 class="display-4">Table of Contents: ${TableofContents}</h1>
         <h1 class="display-4">Installation Instructions: ${Installation}</h1>

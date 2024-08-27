@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const { error } = require('console');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -52,10 +53,10 @@ const questions = [
     }
 ];
 
-inquirer.prompt(questions)
-    .then((answers) => {
-        console.log(answers);
-    });
+//inquirer.prompt(questions)
+//    .then((answers) => {
+//        console.log(answers);
+//    });
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
@@ -72,7 +73,7 @@ function generateFile (answers) {
     return `
         # ${answers.TitleofProject} 
 
-        ![License](https://img.shields.io/badge/License-${answers.license}-blue.svg)
+        ![License](https://img.shields.io/badge/License-${answers.License}-blue.svg)
 
         ## Description
         ${answers.Description}
@@ -108,7 +109,14 @@ function generateFile (answers) {
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions).then((answers)=> {
+        //console.log(answers)
+        const content = generateFile(answers)
+        fs.writeFile("README.md", content, (error)=> 
+        error? console.log(error): console.log("file created"))
+    })
+}
 
 // Function call to initialize app
 init();

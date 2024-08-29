@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const { error } = require('console');
-const generateMarkdown = require("./utils/generateMarkdown.js");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -70,7 +70,7 @@ function writeToFile(fileName, data) {
     });
 }
 
-function generateFile (answers) {
+/* function generateFile (answers) {
     return `
         # ${answers.TitleofProject} 
 
@@ -107,13 +107,13 @@ function generateFile (answers) {
         - GitHub link: (https://github.com/${answers.GitHub})
         - Email Address:${answers.Email}
     `;
-}
+}*/
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).then((answers)=> {
+    inquirer.prompt(questions).then((data)=> {
         //console.log(answers)
-        const content = generateFile(answers)
+        const content = generateMarkdown(data)
         fs.writeFile("./utils/README.md", content, (error)=> 
         error? console.log(error): console.log("file created"))
     })

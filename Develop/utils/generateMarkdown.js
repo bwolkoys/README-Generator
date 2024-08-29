@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(License) {
   if (License) {
-    return `[![License](https://img.shields.io/badge/license-${answers.License}-yellowgreen.svg)]`;
+    return `[![License](https://img.shields.io/badge/license-${data.License}-yellowgreen.svg)]`;
 } else {
     return '';
 }
@@ -22,7 +22,7 @@ function renderLicenseLink(License) {
 // If there is no license, return an empty string
 function renderLicenseSection(License) {
   if (License) {
-    return `This project is licensed under the ${answers.License}.`
+    return `This project is licensed under the ${data.License}.`
   } else {
     return '';
   }
@@ -30,9 +30,41 @@ function renderLicenseSection(License) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `# ${data.TitleofProject}
 
-`;
+    ![License](https://img.shields.io/badge/License-${data.License}-blue.svg)
+
+        ## Description
+        ${data.Description}
+
+        ## Table of Contents
+        - [Installation](#installation)
+        - [Usage](#usage)
+        - [License](#license)
+        - [Contribution](#Contribution)
+        - [Tests](#Tests)
+        - [Questions](#Questions)
+
+        ## Installation
+        ${data.Installation}
+
+        ## Usage
+        ${data.Usage}
+
+        ## License
+        This project is licensed under the ${data.License}.
+
+        ## Contribution
+        ${data.Contributing}
+
+        ## Tests
+        ${data.Tests}
+
+        ## Questions
+        If you have any questions, here is my GitHub link and email address:
+        - GitHub link: (https://github.com/${data.GitHub})
+        - Email Address:${data.Email}
+    `;
 }
 
 module.exports = generateMarkdown;

@@ -2,7 +2,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const { error } = require('console');
-const generateMarkdown = require("./utils/generateMarkdown");
+const path = require("path");
+const generateMarkdown = require("./utils/generateMarkdown.js");
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -70,7 +71,8 @@ function writeToFile(fileName, data) {
     });
 }
 
-/* function generateFile (answers) {
+/* Originally created the generateFile in index.js, keeping it here, but moved it to generateMarkdown.js and switched out (answers) to (data) because that was in the starter code
+function generateFile (answers) {
     return `
         # ${answers.TitleofProject} 
 
@@ -112,7 +114,7 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then((data)=> {
-        //console.log(answers)
+        //console.log(responses)
         const content = generateMarkdown(data)
         fs.writeFile("./utils/README.md", content, (error)=> 
         error? console.log(error): console.log("file created"))

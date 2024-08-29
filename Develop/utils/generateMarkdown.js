@@ -63,7 +63,7 @@ ${data.Tests}
 ## Questions
 If you have any questions, here is my GitHub link and email address:
 - GitHub link: (https://github.com/${data.GitHub})
-- Email Address:${data.Email}
+- Email Address: ${data.Email}
 `;
 }
 module.exports = generateMarkdown;

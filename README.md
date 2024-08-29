@@ -29,8 +29,8 @@
 ## Resources 
 
 - Module 9 (Node.JS) Student Mini Project (Portfolio Generator)
-- https://www.npmjs.com/package/inquirer 
 - License options GitHub: https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba 
 - Why I added require('path'): https://nodejs.org/api/path.html 
+- inquirer package: https://www.npmjs.com/package/inquirer/v/8.2.4 
 
 ## Link to Demo

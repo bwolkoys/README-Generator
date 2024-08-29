@@ -38,7 +38,7 @@ function generateMarkdown(data) {
         ${data.Description}
 
         ## Table of Contents
-        - [Installation](Installation)
+        - [Installation](#Installation)
         - [Usage](#Usage)
         - [License](#License)
         - [Contribution](#Contribution)

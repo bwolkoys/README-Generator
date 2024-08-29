@@ -1,10 +1,10 @@
 
         # Project 1 
 
-        ![License](https://img.shields.io/badge/License-BSD 2-Clause License-blue.svg)
+        ![License](https://img.shields.io/badge/License-BSD 3-Clause License-blue.svg)
 
         ## Description
-        test
+        generator
 
         ## Table of Contents
         - [Installation](#installation)
@@ -15,22 +15,22 @@
         - [Questions](#Questions)
 
         ## Installation
-        test1
+        test
 
         ## Usage
         test
 
         ## License
-        This project is licensed under the BSD 2-Clause License.
+        This project is licensed under the BSD 3-Clause License.
 
         ## Contribution
-        test1
+        guidelines
 
         ## Tests
         test
 
         ## Questions
         If you have any questions, here is my GitHub link and email address:
-        - bwolkoys(https://github.com/bwolkoys)
-        - bnwolkoys@gmail.com(mailto:bnwolkoys@gmail.com)
+        - GitHub link: (https://github.com/bwolkoys)
+        - Email Address:bnwolkoys@gmail.com
     

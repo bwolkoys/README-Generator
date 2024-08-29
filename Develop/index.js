@@ -104,8 +104,8 @@ function generateFile (answers) {
 
         ## Questions
         If you have any questions, here is my GitHub link and email address:
-        - ${answers.GitHub}(https://github.com/${answers.GitHub})
-        - ${answers.Email}(mailto:${answers.Email})
+        - GitHub link: (https://github.com/${answers.GitHub})
+        - Email Address:${answers.Email}
     `;
 }
 
@@ -114,7 +114,7 @@ function init() {
     inquirer.prompt(questions).then((answers)=> {
         //console.log(answers)
         const content = generateFile(answers)
-        fs.writeFile("./Develop/README.md", content, (error)=> 
+        fs.writeFile("./utils/README.md", content, (error)=> 
         error? console.log(error): console.log("file created"))
     })
 }
